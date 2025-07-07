@@ -1,0 +1,170 @@
+:root {
+  --text-color: #1e1e1e;
+  --background-color: #f2f2f2;
+  --card-bg: #ffffff;
+  --accent-gradient: linear-gradient(90deg, #ff6a00, #a200ff);
+}
+
+/* dark mode */
+/* @media(prefers-color-scheme: dark){
+    :root{
+    --text-color: rgb(255, 255, 255);
+    --background-color: rgb(52, 51, 51);
+}
+} */
+
+*{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Almendra Display", serif;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+}
+
+main{
+    width: 90%;
+    max-width: 800px;
+    padding: 40px 20px;
+}
+
+
+/* HEADER */
+.navbar {
+  width: 100vw; /* ocupa 100% da largura da janela */
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-title {
+  font-family: "Fascinate Inline", system-ui;
+  font-size: 30px;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 1px;
+  text-align: center;
+  max-width: 90%;
+}
+/* HEADER */
+
+/* CORPO DO DIARIO */
+.journal-entry {
+  margin-bottom: 30px;
+}
+
+.card {
+	background-color: var(--card-bg);
+	border-radius: 20px;
+	box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-family: "Limelight", sans-serif;
+	font-size: 25px;
+	margin-bottom: 5px;
+  color: #50087a;
+}
+
+.card time {
+  font-size: 14px;
+  color: #ff9430;
+}
+
+.card p {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 13px;
+  line-height: 1.6;
+	margin-bottom: 10px;
+  color: #444;
+}
+
+/* .em-breve {
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  color: #888;
+  border-top: 1px dashed #ccc;
+} */
+
+.novas-entradas {
+  background: linear-gradient(to right, #f4f4f4, #fafafa);
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #555;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  margin-top: 40px;
+}
+
+.novas-entradas p {
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* CORPO DO DIARIO */
+
+/* FOOTER */
+.site-footer {
+  width: 100%;
+  background: linear-gradient(90deg, #a200ff, #ff6a00); /* roxo → laranja */
+  color: #fff;
+  text-align: center;
+  padding: 20px 20px;
+  margin-top: auto;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .navbar-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    font-size: 14px;
+    padding: 15px 8px;
+  }
+}
