@@ -62,6 +62,9 @@ main {
   padding: 40px 20px;
 }
 
+
+
+
 /* BOTÃO */
 #toggle-dark {
   position: fixed;
@@ -103,6 +106,9 @@ main {
 }
 /* BOTÃO */
 
+
+
+
 /* HEADER */
 .navbar {
   width: 100vw;
@@ -124,12 +130,38 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  text-emphasis-color: transparent;
   letter-spacing: 1px;
   text-align: center;
   max-width: 90%;
 }
+
+/* Botão hamburguer discreto */
+.menu-toggle {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background-color: var(--card-title);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
 /* HEADER */
+
+
+
 
 /* CORPO DO DIARIO */
 .journal-entry {
@@ -191,6 +223,9 @@ main {
 }
 /* CORPO DO DIARIO */
 
+
+
+
 /* FOOTER */
 .site-footer {
   width: 100%;
@@ -204,6 +239,7 @@ main {
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
 /* FOOTER */
+
 
 
 
@@ -222,3 +258,5 @@ main {
     padding: 15px 8px;
   }
 }
+
+
