@@ -5,6 +5,8 @@
   --accent-gradient-orange: linear-gradient(90deg, #ff6a00, #a200ff);
   --accent-gradient-purple: linear-gradient(90deg, #a200ff, #ff6a00);
 
+  --btn-border: #7846be;
+
   --card-title: #50087a;
   --card-time: #ff9430;
   --card-text: #444;
@@ -17,25 +19,8 @@
   --footer-bg: var(--accent-gradient-purple);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --text-color: #f5f5f5;
-    --background-color: #1e1e1e;
-    --card-bg: #2a2a2a;
+/* @media (prefers-color-scheme: dark) {} */
 
-    --card-title: #ce9eff;
-    --card-time: #ffa857;
-    --card-text: #ddd;
-
-    --highlight-bg: linear-gradient(to right, #2b2b2b, #1e1e1e);
-    --highlight-text: #ccc;
-
-    --navbar-bg: #2a2a2a;
-    --footer-text: #eee;
-    --footer-bg: linear-gradient(90deg, #a200ff, #ff6a00);
-  }
-} */
- 
 /* Dark mode manual via classe */
 .dark-mode {
   --text-color: #f5f5f5;
@@ -76,6 +61,47 @@ main {
   max-width: 800px;
   padding: 40px 20px;
 }
+
+/* BOTÃO */
+#toggle-dark {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #6c06af;
+  border: 2px solid #f0b905;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease, border 0.3s ease;
+}
+
+#toggle-dark:hover {
+  background-color: #f0c105;
+  transform: scale(1.05);
+}
+
+#toggle-dark:focus {
+  outline: none;
+  border: 2px solid var(--btn-border); /* cor vibrante para acessibilidade */
+}
+
+/* Ícone estilizado via CSS */
+#toggle-dark .icon::before {
+  content: '☾';
+  font-size: 20px;
+  line-height: 1;
+}
+
+.dark-mode #toggle-dark .icon::before {
+  content: '☀︎';
+}
+/* BOTÃO */
 
 /* HEADER */
 .navbar {
@@ -178,6 +204,8 @@ main {
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
 /* FOOTER */
+
+
 
 /* RESPONSIVIDADE */
 @media (max-width: 600px) {
